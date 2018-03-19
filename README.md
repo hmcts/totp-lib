@@ -4,7 +4,7 @@ Time-based One-time Password algorithm implementation to be shared across projec
 
 ## Running the tests
 ```bash
-./mvnw test
+./gradlew test
 ```
 
 ## License
