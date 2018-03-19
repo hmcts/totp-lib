@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'java-library'
 apply plugin: 'maven'
+apply plugin: 'jacoco'
 
 group = 'uk.gov.hmcts.auth.totp'
 version = '1.0.1'
@@ -17,4 +18,14 @@ dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.12'
   testCompile group: 'org.assertj', name: 'assertj-core', version: '3.5.2'
   compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.16.10'
+}
+
+jacocoTestReport.dependsOn += 'test'
+
+jacocoTestReport {
+  reports {
+    xml.enabled true
+    csv.enabled false
+    html.enabled false
+  }
 }
