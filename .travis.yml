@@ -7,7 +7,6 @@ before_install:
   - wget -O ~/codacy-coverage-reporter-assembly-latest.jar https://github.com/codacy/codacy-coverage-reporter/releases/download/2.0.2/codacy-coverage-reporter-2.0.2-assembly.jar
 
 script:
-  - ./gradlew build
   - ./gradlew jacocoTestReport
 
 after_success:
